@@ -1,5 +1,5 @@
 # dbt artifacts
-/target/
+../target/
 /dbt_modules/
 
 # dbt dependencies
