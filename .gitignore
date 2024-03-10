@@ -1,1 +1,1 @@
-# dbt artifacts/target//dbt_modules/# dbt dependencies/dbt_modules.yml# dbt environment files.envprofiles.ymlprofiles.d/# IDE and editor files.idea/.vscode/*.iml*.ipynb_checkpoints/# Compiled Python files__pycache__/# Other*.log.DS_Store
+/target//dbt_modules/# dbt dependencies/dbt_modules.yml# dbt environment files.envprofiles.ymlprofiles.d/# IDE and editor files.idea/.vscode/*.iml*.ipynb_checkpoints/# Compiled Python files__pycache__/# Other*.log.DS_Store
