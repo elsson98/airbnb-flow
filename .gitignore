@@ -9,3 +9,6 @@ __pycache__/
 
 # Local configuration files
 profiles.yml
+
+# Python virtual environment
+venv/
