@@ -1,14 +1,18 @@
 # dbt artifacts
-/target/
+airbnb2/target
+airbnb2/logs
+airbnb2/dbt_packages
+logs
 
 # dbt logs
-/run/
+/run
 
 # Compiled python files
-__pycache__/
+__pycache__
 
 # Local configuration files
 profiles.yml
 
 # Python virtual environment
-venv/
+venv
+.idea
