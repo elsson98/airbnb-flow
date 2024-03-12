@@ -1,0 +1,21 @@
+-- Create the reporter role if it doesn't exist
+CREATE ROLE reporter;
+
+-- Create user and assign default role and namespace
+CREATE USER preset WITH PASSWORD 'presetPassword123' LOGIN;
+
+-- Assign default role and namespace to the user
+ALTER USER preset SET ROLE reporter;
+ALTER USER preset SET SEARCH_PATH TO raw; -- Assuming the schema is named "raw"
+
+-- Grant privileges to the reporter role
+GRANT ALL PRIVILEGES ON DATABASE airbnb TO reporter;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA raw TO reporter;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA raw TO reporter;
+
+-- Add comment to the role (optional)
+COMMENT ON ROLE reporter IS 'Role for reporting purposes';
+
+-- Add comment to the user role assignment (optional)
+COMMENT ON ROLE reporter IS 'Role for reporting purposes';
+      - "GRANT SELECT ON {{ this }} TO reporter"

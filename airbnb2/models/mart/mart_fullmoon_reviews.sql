@@ -20,5 +20,4 @@ FROM
 LEFT JOIN
     full_moon_dates fm
 ON
-    TO_DATE(r.review_date, 'YYYY-MM-DD') = TO_DATE(fm.full_moon_date, 'YYYY-MM-DD') - INTERVAL '1 day'
-
+    r.review_date::date = (fm.full_moon_date::date - INTERVAL '1 day')
