@@ -9,7 +9,7 @@ def create_seeds() -> str:
     result = DbtCoreOperation(
         commands=["pwd", "dbt debug", "dbt seed"],
         project_dir=variables.get('project_dir'),
-        profiles_dir=variables.get('profiles_dir'),
+        profiles_dir=variables.get('dbt_dir'),
     ).run()
     return result
 
@@ -19,7 +19,7 @@ def run_models() -> str:
     result = DbtCoreOperation(
         commands=["pwd", "dbt debug", "dbt run"],
         project_dir=variables.get('project_dir'),
-        profiles_dir=variables.get('profiles_dir'),
+        profiles_dir=variables.get('dbt_dir'),
     ).run()
     return result
 
@@ -29,7 +29,7 @@ def run_test() -> str:
     result = DbtCoreOperation(
         commands=["pwd", "dbt debug", "dbt test"],
         project_dir=variables.get('project_dir'),
-        profiles_dir=variables.get('profiles_dir'),
+        profiles_dir=variables.get('dbt_dir'),
     ).run()
     return "success"
 

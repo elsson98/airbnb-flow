@@ -60,4 +60,4 @@ def dbt_workflow():
 
 if __name__ == "__main__":
     dbt_workflow()
-    dbt_workflow.serve("Airbnb workflow")
+    # dbt_workflow.serve("Airbnb workflow")
